@@ -1,3 +1,5 @@
+package project01am;
+
 import java.util.*;
 import java.util.Set;
 
@@ -8,17 +10,17 @@ public class numbersPermutations {
         // create scanner object
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Please enter 4 numbers separated by comma (,): ");
-        int[] numbers = new int[4];
+        System.out.print("Please enter 4 numbers/alphabets separated by comma (,): ");
+        String[] numbers = new String[4];
 
         String[] input = scanner.nextLine().split(",");
         for (int i = 0; i < 4; i++) {
-            numbers[i] = Integer.parseInt(input[i]);
+            numbers[i] = input[i];
         }
 
         scanner.close();
 
-        Set<List<Integer>> results = new HashSet<>();
+        Set<List<String>> results = new HashSet<>();
 
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < numbers.length; j++) {
@@ -33,7 +35,7 @@ public class numbersPermutations {
                         if (l == i || l == j || l == k) {
                             continue;
                         }
-                        List<Integer> permutations = new ArrayList<Integer>();
+                        List<String> permutations = new ArrayList<String>();
                         permutations.add(numbers[i]);
                         permutations.add(numbers[j]);
                         permutations.add(numbers[k]);
@@ -45,7 +47,7 @@ public class numbersPermutations {
             }
 
         }
-        for (List<Integer> permutations : results) {
+        for (List<String> permutations : results) {
             System.out.println(permutations);
         }
     }
