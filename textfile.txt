@@ -1,0 +1,7 @@
+product [id=1, prodName=Mouse, prodDesc=For click UI on screen, prodCategory=Computer, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
+product [id=2, prodName=keyboard, prodDesc=device that allows alpha numeric inputs, prodCategory=Computer, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
+product [id=3, prodName=15.6 inch monitor, prodDesc=Extended display panel, prodCategory=Computer, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
+product [id=4, prodName=Huawei Pura 70 Ultra, prodDesc=Huawei phone, prodCategory=mobile, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
+product [id=5, prodName=Huawei Mate 50 Pr, prodDesc=Huawei phone, prodCategory=mobile, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
+product [id=6, prodName=iphone 16 pro, prodDesc=Apple phone, prodCategory=mobile, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
+product [id=7, prodName=iphone 14 pro, prodDesc=Apple phone, prodCategory=mobile, createdDate=Mon Oct 21 00:00:00 GMT+08:00 2024]
