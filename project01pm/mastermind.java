@@ -9,6 +9,7 @@ public class mastermind {
     public static void main(String[] args) {
 
         int n = 12;
+        ArrayList<String> guessHistory = new ArrayList<>();
 
         // generate a random number as the correct ans
         Random rand = new Random();
@@ -24,12 +25,15 @@ public class mastermind {
 
         while (n != 0) {
             // scanner object to take in input of a 4 digit number (1-6)
-            System.out.print("Enter a 4 digit number using digits 1 to 6: ");
+            System.out.print("Enter a 4 digit number using digits 1 to 6 or type history to check past guesses: ");
             Scanner scanner = new Scanner(System.in);
-            String numberStr = scanner.nextLine();
-            n--;
 
-            int number = Integer.parseInt(numberStr);
+            String numberStr = scanner.nextLine();
+            if (numberStr.equals("history")) {
+                System.out.println(guessHistory);
+                continue;
+            }
+            n--;
 
             // Validate user input
             if (!numberStr.matches("[1-6]{4}")) {
@@ -65,21 +69,19 @@ public class mastermind {
                 }
             }
 
-            //add in a guess history to check what number permutation was guessed
+            // add in a guess history to check what number permutation was guessed
+            guessHistory.add(
+                    "\n Number input: " + numberStr + " (Tries left: " + n + ")" + "\n" + "CP: " + colourPosition + "\n"
+                            + "C: " + colour + "\n");
 
-            // String[] guessHistory = new String[n - 1];
-            // for (int i = 0; i < n - 1; i++) {
-            //     guessHistory[i] = "Number input: " + numberStr + "\n" + "CP: " + colourPosition + "\n" + "C: " + colour;
-            // }
-
-            // System.out.println("Number input: " + numberStr + "\n" + "CP: " + colourPosition + "\n" + "C: " + colour
-            //         + "\n Number of tries left: " + n);
+            System.out.println("Number input: " + numberStr + "\n" + "CP: " + colourPosition
+                    + "\n" + "C: " + colour
+                    + "\nNumber of tries left: " + n + "\n");
 
             if (numberStr.equals(answerStr)) {
+                System.out.println("========= Guess History ============");
+                System.out.println(guessHistory);
                 System.out.println("You guessed the answer!");
-                // for (String s : guessHistory) {
-                //     System.out.println(s);
-                // }
                 scanner.close();
                 break;
             }
@@ -88,7 +90,6 @@ public class mastermind {
                 System.out.println("No more tries left. You lose!");
                 break;
             }
-
         }
 
     }
