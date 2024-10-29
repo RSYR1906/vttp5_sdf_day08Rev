@@ -1,9 +1,9 @@
 # Day 8 revision
 
-## Morning Session:
-project01am
+## project01am
+- Numbers permutations
+- App.java - Comparator, ArrayList, BufferedWriter, Streams, 
 
-App.java - Comparator, ArrayList, BufferedWriter, Streams, 
-
-## Afternoon Session:
-project01pm - 
+## project01pm 
+- Mastermind game
+- Calculator (Client-Server)
